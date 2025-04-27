@@ -1,0 +1,35 @@
+.image-row{
+    display: flex;
+    justify-content: center;
+}
+.image-container{
+    text-align: center;
+    margin: 10px;
+    position: relative;
+}
+.circular-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);  
+}
+
+.image-container:hover.circular-image{
+filter:brightness(80%);
+transform: scale(1.1);
+transition: all 0.3s ease-in-out;
+}
+.image-container.caption{
+   margin-top: 5px;
+   font-size: 12px;
+   opacity: 0;
+   transition: opacity 0.3s ease-in-out;
+   position: absolute;
+   bottom: -20px;
+   left: 50%;
+   transform: translateX(-50%);
+   cursor: pointer;
+}
+.image-conatiner:hover.caption{
+    opacity: 1;
+}
